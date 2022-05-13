@@ -1,0 +1,279 @@
+img.background {
+    min-height: 100%;
+    min-width: 950px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: -52px;
+    
+  /* Зависит от размера изображения */
+  @media screen and (max-width: 950px){
+	img.bg {
+	  left: 0;
+	  margin-left: 0;
+	}
+  }
+}
+h1{
+    position: absolute;
+    width: 414px;
+    height: 28px;
+    left: 503px;
+    top: 147px;
+    
+    /* Button */
+    
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 100%;
+    /* or 23px */
+    
+    text-align: center;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    
+    color: #000000;
+    
+}
+.st1{
+    position: absolute;
+width: 71px;
+height: 11px;
+left: 779px;
+top: 171px;
+
+font-family: 'Mulish';
+font-style: normal;
+font-weight: 700;
+font-size: 15px;
+line-height: 100%;
+/* or 15px */
+
+text-align: center;
+letter-spacing: 1.25px;
+text-transform: uppercase;
+
+color: #000000;
+
+}
+
+.st2{
+    position: absolute;
+    width: 468px;
+    height: 28px;
+    left: 486px;
+    top: 223px;
+    
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    /* or 18px */
+    
+    text-align: center;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    
+    color: #000000;
+}
+h3{
+    position: absolute;
+width: 507px;
+height: 28px;
+left: 456px;
+top: 349px;
+
+font-family: 'Mulish';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 100%;
+/* or 18px */
+
+text-align: center;
+letter-spacing: 1.25px;
+text-transform: uppercase;
+
+color: #CBD2D9;
+}
+.em{
+    position: absolute;
+width: 640px;
+height: 84px;
+left: 400px;
+top: 420px;
+
+}
+.email{
+    position: absolute;
+    left: 2.33%;
+    right: 49.24%;
+    top: 1.47%;
+    bottom: 78.29%;
+    
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 17px;
+    line-height: 100%;
+    /* identical to box height, or 17px */
+    
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    
+    /* Neutral / Grey 800 */
+    
+    color: #323F4B;
+}
+.em ::-webkit-input-placeholder {
+    color: #CBD2D9;
+    text-decoration-line: underline;
+  }
+.em input{
+    display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 12px;
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 31.37%;
+bottom: 1.96%;
+
+background: url(../../../assets/img/email.png) no-repeat; 
+padding-left: 40px;
+
+
+background: #FFFFFF;
+/* Neutral / Grey 200 */
+
+border: 1px solid #CBD2D9;
+box-sizing: border-box;
+border-radius: 4px;
+font-family: 'Mulish';
+font-style: normal;
+font-weight: 600;
+font-size: 21px;
+line-height: 150%;
+
+
+text-decoration-line: underline;
+
+/* Neutral / Grey 200 */
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 12px;
+}
+
+.pass{
+    position: absolute;
+width: 640px;
+height: 84px;
+left: 400px;
+top: 532px;
+
+}
+.password{
+    position: absolute;
+left: 2.33%;
+right: 49.24%;
+top: 1.47%;
+bottom: 78.29%;
+
+font-family: 'Mulish';
+font-style: normal;
+font-weight: 800;
+font-size: 17px;
+line-height: 100%;
+/* identical to box height, or 17px */
+
+letter-spacing: 1.5px;
+text-transform: uppercase;
+
+/* Neutral / Grey 800 */
+
+color: #323F4B;
+
+}
+.pass ::-webkit-input-placeholder {
+    color: #CBD2D9;
+     }
+.pass input{
+    /* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 12px;
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 31.37%;
+bottom: 1.96%;
+
+/* Neutral / White */
+
+background: #FFFFFF;
+/* Neutral / Grey 200 */
+
+border: 1px solid #CBD2D9;
+box-sizing: border-box;
+border-radius: 4px;
+font-family: 'Mulish';
+font-style: normal;
+font-weight: 600;
+font-size: 21px;
+line-height: 150%;
+/* identical to box height, or 32px */
+
+
+/* Neutral / Grey 200 */
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 12px;
+}
+.login{
+    position: absolute;
+    width: 335px;
+    height: 65px;
+    left: 552px;
+    top: 649px;
+    border: #2F80ED;
+    /* Primary / Primary 500 */
+    
+    background: #2F80ED;
+    border-radius: 5px;
+
+    color:#ffffff;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+         
+}
+.login:hover { background: #296fcc; }
+.login:active {
+  background: #2F80ED;
+  box-shadow: 0 3px  #2F80ED inset;
+}
