@@ -1,0 +1,19 @@
+app-events{
+  display: flex;
+}
+.vertical-menu {
+  float: left;
+  width: fit-content;
+}
+
+.vertical-menu a {
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+

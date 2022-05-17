@@ -30,7 +30,7 @@ export class AdminLoginComponent implements OnInit {
     }).finally(() => {
       if (!this.authenticationError) {
         this.isAuthenticated = true;
-        this.router.navigate(['/events']);
+        this.router.navigate(['index']);
       }
     });
   }

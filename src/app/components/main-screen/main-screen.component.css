@@ -1,9 +1,9 @@
-app-users{
+app-main-screen{
   display: flex;
 }
 .vertical-menu {
   float: left;
-  height: available;
+  width: fit-content;
 }
 
 .vertical-menu a {
