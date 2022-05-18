@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {SessionToken} from "../../models/session-token";
 
-const BASE_URL: string = "http://172.20.13.76:8080/login";
+const BASE_URL: string = "http://172.20.13.76:8080/api/login";
 
 @Injectable({
   providedIn: 'root'
