@@ -17,6 +17,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {StatisticsComponent} from './components/statistics/statistics.component';
 import {ModerationComponent} from './components/moderation/moderation.component';
+import {EventsService} from "./services/events-service/events.service";
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import {ModerationComponent} from './components/moderation/moderation.component'
     MatIconModule,
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [EventsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

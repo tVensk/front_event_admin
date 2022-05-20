@@ -4,5 +4,43 @@
   <a [routerLink]="'/users'"> Users </a>
   <a [routerLink]="'/moderation'"> Moderation </a>
 </div>
-<p>EVENTS</p>
+<div>
+  <div>
+    <div>
+      <h4>Events</h4>
+      <table>
+        <thead>
+        <tr>
+          <td>Event ID</td>
+          <td>Start</td>
+          <td>End</td>
+          <td>Creator</td>
+          <td>Location</td>
+          <td>Name</td>
+          <td>Price</td>
+          <td>Status</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let event of events">
+          <td>{{event.id}}</td>
+          <td>{{parseDate(event.date)}}</td>
+          <td>{{parseDate(event.date)}}</td>
+          <td>{{event.creator.name}}</td>
+          <td>{{event.address}}</td>
+          <td>{{event.name}}</td>
+          <td>{{event.price}}</td>
+          <td>{{event.status}}</td>
+        </tr>
+        </tbody>
+      </table>
+      <hr>
+      <ul>
+        <li *ngFor="let p of pages; let i=index">
+          <a (click)="setPage(i,$event)">{{i}}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 <router-outlet></router-outlet>
