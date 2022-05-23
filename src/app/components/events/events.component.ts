@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {EventsService} from "../../services/events-service/events.service";
 import {Event} from "../../models/event";
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -14,7 +15,8 @@ export class EventsComponent implements OnInit {
   pages: number[] = [];
 
   constructor(
-    private eventsService: EventsService
+    private eventsService: EventsService,
+    private router: Router
   ) {
   }
 
@@ -40,4 +42,7 @@ export class EventsComponent implements OnInit {
     return date.getDate() + '-' + (date.getMonth() + 1) + '-' + date.getFullYear();
   }
 
+  showEventDetails(event: Event) {
+    this.router.navigate(['events/details'], {state: event}).then(() => console.log("Navigated to event details with event", event));
+  }
 }

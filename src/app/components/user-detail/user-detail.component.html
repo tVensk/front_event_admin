@@ -8,6 +8,28 @@
 </div>
 <div>
   <div>
+    <h2>Main information</h2>
+
+    <div>
+      <label>Name</label>
+      <span>{{user.name}}</span>
+    </div>
+
+    <div>
+      <label>Email</label>
+      <span>{{user.email}}</span>
+    </div>
+
+    <div>
+      <label>Phone</label>
+      <span>{{user.phone}}</span>
+    </div>
+
+    <div>
+      <label>Work</label>
+      <span>{{user.work}}</span>
+    </div>
+
     <div>
       <table>
         <thead>
@@ -15,7 +37,6 @@
           <td>Event ID</td>
           <td>Start</td>
           <td>End</td>
-          <td>Creator</td>
           <td>Location</td>
           <td>Name</td>
           <td>Price</td>
@@ -23,11 +44,10 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let event of events" (click)="showEventDetails(event)">
+        <tr *ngFor="let event of user.creatorEvents" (click)="showEventDetails(event)">
           <td>{{event.id}}</td>
           <td>{{parseDate(event.startDate)}}</td>
           <td>{{parseDate(event.endDate)}}</td>
-          <td>{{event.creator.name}}</td>
           <td>{{event.address}}</td>
           <td>{{event.name}}</td>
           <td>{{event.price}}</td>
@@ -35,13 +55,7 @@
         </tr>
         </tbody>
       </table>
-      <hr>
-      <ul>
-        <li *ngFor="let p of pages; let i=index">
-          <a (click)="setPage(i,$event)">{{i}}</a>
-        </li>
-      </ul>
     </div>
+
   </div>
 </div>
-<router-outlet></router-outlet>

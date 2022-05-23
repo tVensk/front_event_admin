@@ -18,6 +18,9 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {StatisticsComponent} from './components/statistics/statistics.component';
 import {ModerationComponent} from './components/moderation/moderation.component';
 import {EventsService} from "./services/events-service/events.service";
+import {UsersService} from "./services/users-service/users.service";
+import { UserDetailComponent } from './components/user-detail/user-detail.component';
+import { EventDetailComponent } from './components/event-detail/event-detail.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,9 @@ import {EventsService} from "./services/events-service/events.service";
     UsersComponent,
     MainScreenComponent,
     StatisticsComponent,
-    ModerationComponent
+    ModerationComponent,
+    UserDetailComponent,
+    EventDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +46,7 @@ import {EventsService} from "./services/events-service/events.service";
     MatIconModule,
     BrowserAnimationsModule,
   ],
-  providers: [EventsService],
+  providers: [EventsService, UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

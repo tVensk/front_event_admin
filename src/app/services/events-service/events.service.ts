@@ -28,4 +28,8 @@ export class EventsService {
       }
     })
   }
+
+  deleteEvent(event: Event) {
+    //TODO:delete implementation
+  }
 }
