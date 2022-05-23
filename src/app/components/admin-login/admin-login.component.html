@@ -9,14 +9,14 @@
     <h2 class="st2">discover popular events & nearby fun</h2>
   </header>
   <div>
-    <h3>ВВЕДИТЕ ПОЧТУ И ПАРОЛЬ, ЧТОБЫ ВОЙТИ</h3>
+    <h3>ENTER YOUR EMAIL AND PASSWORD TO LOGIN</h3>
     <form class="em">
-      <label class="email">ПОЧТА</label>
+      <label class="email">EMAIL</label>
       <input [(ngModel)]="email" name="email" type="text" id="mail" placeholder="name@email.com">
     </form>
     <form class="pass">
-      <label class="password">ПАРОЛЬ</label>
-      <input [(ngModel)]="password" name="password" type="password" id="pin" placeholder="********">
+      <label class="password">PASSWORD</label>
+        <input [(ngModel)]="password" name="password" type="password" id="pin" placeholder="********">
     </form>
     <button class="login" (click)="login()">ВОЙТИ</button>
   </div>

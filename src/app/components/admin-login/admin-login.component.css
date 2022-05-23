@@ -1,11 +1,10 @@
 img.background {
-  min-height: 100%;
-  min-width: 950px;
-  width: 100%;
-  height: auto;
-  position: fixed;
-  top: 0;
-  left: -52px;
+  position: relative;
+  width: 1440px;
+  height: 950px;
+  left: -6px;
+  padding-top:4px;
+  background-attachment: scroll;
 }
 
   /* Зависит от размера изображения */
@@ -212,7 +211,7 @@ color: #323F4B;
     color: #CBD2D9;
      }
 .pass input{
-    /* Auto layout */
+
 
 display: flex;
 flex-direction: row;
@@ -226,6 +225,8 @@ top: 31.37%;
 bottom: 1.96%;
 
 /* Neutral / White */
+
+padding-left: 40px;
 
 background: #FFFFFF;
 /* Neutral / Grey 200 */
