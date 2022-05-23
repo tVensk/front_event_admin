@@ -7,9 +7,9 @@
   <p><a [routerLink]="'/moderation'">Moderation</a>
 </div>
 <div>
-  <div>
+  <div class="eventList">
     <div>
-      <h4>Events</h4>
+      <h4 class="Ev">Events</h4>
       <table>
         <thead>
         <tr>
@@ -26,8 +26,8 @@
         <tbody>
         <tr *ngFor="let event of events">
           <td>{{event.id}}</td>
-          <td>{{parseDate(event.date)}}</td>
-          <td>{{parseDate(event.date)}}</td>
+          <td>{{parseDate(event.startDate)}}</td>
+          <td>{{parseDate(event.endDate)}}</td>
           <td>{{event.creator.name}}</td>
           <td>{{event.address}}</td>
           <td>{{event.name}}</td>
