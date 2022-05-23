@@ -20,19 +20,32 @@ export class UsersComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getUsers();
+    this.getUsers(this.page);
   }
 
 
   setPage(i: number, event: any) {
-    event.preventDefault();
+    if (i < 0) {
+      this.page = 0
+      event.preventDefault();
+      this.getUsers(this.page);
+      return;
+    }
+    if (i >= this.pages.length) {
+      this.page = this.pages.length - 1;
+      event.preventDefault();
+      this.getUsers(this.page);
+      return;
+    }
     this.page = i;
-    this.getUsers();
+    event.preventDefault();
+    this.getUsers(this.page);
   }
 
-  private getUsers() {
-    this.userService.getUsers().subscribe((users: any) => {
-      this.users = users
+  private getUsers(page:number) {
+    this.userService.getUsers(page).subscribe((res: any) => {
+      this.users = res.content;
+      this.pages = new Array(res.totalPages);
     })
   }
 

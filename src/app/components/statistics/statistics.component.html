@@ -6,5 +6,34 @@
   <p><a [routerLink]="'/users'">Users</a>
   <p><a [routerLink]="'/moderation'">Moderation</a>
 </div>
-<p>STATS</p>
+<div class="chart-column">
+  <h5>Statistics</h5>
+  <div class="chart">
+    <ngx-charts-pie-chart
+      [results]="eventsPriceData"
+      [legend]="true"
+      [legendTitle]="'Event price'"
+      [view]="[1000,300]"
+      [labels]="true">
+    </ngx-charts-pie-chart>
+  </div>
+  <div class="chart">
+    <ngx-charts-pie-chart
+      [results]="eventsStatusData"
+      [legend]="true"
+      [legendTitle]="'Event status'"
+      [view]="[1000,300]"
+      [labels]="true">
+    </ngx-charts-pie-chart>
+  </div>
+  <div class="chart">
+    <ngx-charts-pie-chart
+      [results]="entityData"
+      [legend]="true"
+      [legendTitle]="'Entities'"
+      [view]="[1000,300]"
+      [labels]="true">
+    </ngx-charts-pie-chart>
+  </div>
+</div>
 <router-outlet></router-outlet>

@@ -21,6 +21,7 @@ import {EventsService} from "./services/events-service/events.service";
 import {UsersService} from "./services/users-service/users.service";
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
 import { EventDetailComponent } from './components/event-detail/event-detail.component';
+import {NgxChartsModule} from "@swimlane/ngx-charts";
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { EventDetailComponent } from './components/event-detail/event-detail.com
     MatListModule,
     MatIconModule,
     BrowserAnimationsModule,
+    NgxChartsModule
   ],
   providers: [EventsService, UsersService],
   bootstrap: [AppComponent]

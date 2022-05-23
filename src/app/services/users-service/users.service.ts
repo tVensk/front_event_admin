@@ -13,8 +13,12 @@ export class UsersService {
   constructor(private http: HttpClient) {
   }
 
-  getUsers() {
-    return this.http.get(BASE_URL +"admin/users", {headers: {"Authorization": SessionToken.sessionToken}});
+  getUsers(page:number) {
+    return this.http.get(BASE_URL + "admin/users?page=" + page, {headers: {"Authorization": SessionToken.sessionToken}});
+  }
+
+  getUserById(id: number) {
+    return this.http.get(BASE_URL + "admin/user/" + id, {headers: {"Authorization": SessionToken.sessionToken}});
   }
 
 }

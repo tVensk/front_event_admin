@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {EventsService} from "../../services/events-service/events.service";
 import {Event} from "../../models/event";
 import {Router} from "@angular/router";
+import {UsersService} from "../../services/users-service/users.service";
 
 
 @Component({
@@ -15,24 +16,43 @@ export class EventsComponent implements OnInit {
   pages: number[] = [];
 
   constructor(
+    private userService: UsersService,
     private eventsService: EventsService,
     private router: Router
   ) {
   }
 
   ngOnInit(): void {
-    this.getEvents();
+    this.getEvents(this.page);
   }
 
   setPage(i: number, event: any) {
-    event.preventDefault();
+    if (i < 0) {
+      this.page = 0
+      event.preventDefault();
+      this.getEvents(this.page);
+      return;
+    }
+    if (i >= this.pages.length) {
+      this.page = this.pages.length - 1;
+      event.preventDefault();
+      this.getEvents(this.page);
+      return;
+    }
     this.page = i;
-    this.getEvents();
+    event.preventDefault();
+    this.getEvents(this.page);
   }
 
-  getEvents() {
-    this.eventsService.getEvents().subscribe((events: any) => {
-      this.events = events;
+  getEvents(page: number) {
+    this.eventsService.getEvents(this.page).subscribe((res: any) => {
+      this.events = res.content;
+      this.pages = new Array(res.totalPages);
+      this.events.forEach((event) => {
+        this.userService.getUserById(event.creator.id).subscribe((user: any) => {
+          event.creator = user;
+        })
+      })
       this.eventsService.parseEventsStatus(this.events);
       this.eventsService.parseEventsLocation(this.events);
     });

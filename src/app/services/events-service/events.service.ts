@@ -3,7 +3,8 @@ import {HttpClient} from "@angular/common/http";
 import {SessionToken} from "../../models/session-token";
 import {Event} from "../../models/event";
 
-const BASE_URL: string = "http://172.20.13.76:8080/api/event/all/active";
+const BASE_PAGE_URL: string = "http://172.20.13.76:8080/api/admin/event/confirmed";
+const BASE_URL: string = "http://172.20.13.76:8080/api/event/all/active"
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,10 @@ export class EventsService {
   constructor(private http: HttpClient) {
   }
 
-  getEvents() {
+  getEvents(page: number) {
+    return this.http.get(BASE_PAGE_URL + "?page=" + page, {headers: {"Authorization": SessionToken.sessionToken}});
+  }
+  getAllEvents() {
     return this.http.get(BASE_URL, {headers: {"Authorization": SessionToken.sessionToken}});
   }
 
