@@ -66,3 +66,91 @@ app-main-screen{
   background-color: #fff;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
+
+
+.userList{
+  margin-left: 253px;
+  margin-top: 0px;
+  width: 1258px;
+  height: 923px;
+  background-color: #F2F4F4;
+  outline: 1px solid #C7CFD6;
+
+}
+
+
+.Us{
+
+width: 331px;
+height: 44px;
+left: 250px;
+margin-top: 0px;
+margin-left: 10px;
+padding-top: 30px;
+
+font-family: 'Rubik';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 44px;
+text-transform: none;
+/* identical to box height, or 138% */
+
+
+color: #475F7B;
+
+}
+
+table{
+
+left: 270px;
+top: 350px;
+bottom: 64px;
+width: 1118px;
+margin-left:10px;
+margin-top: -30px;
+
+background-color: #fff;
+text-align: center;
+table-layout: fixed
+}
+
+thead tr{
+height: 50px;
+left: 0px;
+right: 0px;
+top: 126px;
+
+ font-family: 'Rubik';
+ font-style: normal;
+ font-weight: 400;
+ font-size: 15px;
+ line-height: 18px;
+ /* identical to box height */
+
+
+ color: #475F7B;
+
+}
+ tbody td{
+font-family: 'IBM Plex Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 21px;
+/* identical to box height, or 140% */
+
+
+color: #727E8C;
+ }
+ tbody tr{
+ height: 30px;
+ outline: 0.3px solid #C7CFD6;
+ border-collapse: collapse;
+ padding: 0px;
+ }
+
+ tbody tr:hover {
+ filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.12));
+ background-color: #E7EDF2;
+ }
