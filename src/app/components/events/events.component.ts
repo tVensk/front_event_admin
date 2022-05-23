@@ -33,6 +33,7 @@ export class EventsComponent implements OnInit {
   getEvents() {
     this.eventsService.getEvents().subscribe((events: any) => {
       this.events = events;
+      this.eventsService.parseEventsStatus(this.events);
       this.eventsService.parseEventsLocation(this.events);
     });
   }

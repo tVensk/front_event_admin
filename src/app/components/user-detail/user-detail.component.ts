@@ -20,6 +20,7 @@ export class UserDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.user = history.state;
+    this.eventService.parseEventsStatus(this.user.creatorEvents);
     this.eventService.parseEventsLocation(this.user.creatorEvents);
   }
 

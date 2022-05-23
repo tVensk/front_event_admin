@@ -29,6 +29,23 @@ export class EventsService {
     })
   }
 
+  parseEventsStatus(events: Event[]) {
+    events.forEach((event) => {
+      let now = new Date();
+      let start = new Date(event.startDate);
+      let end = new Date(event.endDate);
+      if (now < start) {
+        event.status = "SCHEDULED"
+      }
+      if (now > start && now < end) {
+        event.status = "IN PROGRESS"
+      }
+      if (now > end) {
+        event.status = "ENDED"
+      }
+    })
+  }
+
   deleteEvent(event: Event) {
     //TODO:delete implementation
   }
