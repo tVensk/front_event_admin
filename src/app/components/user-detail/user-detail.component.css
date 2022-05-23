@@ -72,7 +72,6 @@ app-main-screen {
 }
 
 .userInfo{
-  width: 1129px;
   height: 700px;
   margin-left: 50px;
   top: 50px;
@@ -100,7 +99,6 @@ color: #475F7B;
 .userDetail{
   margin-left: 253px;
   margin-top: 0px;
-  width: 1258px;
   height: 923px;
   background-color: #F2F4F4;
   outline: 1px solid #C7CFD6;
