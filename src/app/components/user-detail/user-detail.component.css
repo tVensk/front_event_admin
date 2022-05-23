@@ -44,7 +44,7 @@ app-main-screen {
   width: 259px;
   height: 923px;
   background-color: #F2F4F4;
-
+  outline: 1px solid #C7CFD6;
 }
 
 .vertical-menu p img {
@@ -71,6 +71,150 @@ app-main-screen {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-h2 {
-  margin-top: 0;
+.userInfo{
+  width: 1129px;
+  height: 700px;
+  margin-left: 50px;
+  top: 50px;
 }
+
+h2 {
+margin-top: 0px;
+width: 597px;
+height: 26px;
+left: calc(50% - 597px/2 - 90.5px);
+margin-left: 10px;
+padding-top: 50px;
+
+font-family: 'Rubik';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 26px;
+/* identical to box height */
+
+
+color: #475F7B;
+
+}
+.userDetail{
+  margin-left: 253px;
+  margin-top: 0px;
+  width: 1258px;
+  height: 923px;
+  background-color: #F2F4F4;
+  outline: 1px solid #C7CFD6;
+}
+
+.name label,.email label,.phone label,.work label{
+
+width: 169.86px;
+height: 34px;
+margin-top: 0px;
+
+font-family: 'IBM Plex Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 15px;
+line-height: 34px;
+/* identical to box height, or 227% */
+
+
+color: #596778;
+}
+.name p,.email p,.phone p,.work p{
+
+margin-top: 0px;
+width: 480px;
+height: 36px;
+padding-top: 12px;
+padding-left: 15px;
+
+
+background: #FFFFFF;
+/* Neutral / Grey 200 */
+
+border: 1px solid #CBD2D9;
+border-radius: 4px;
+
+font-family: 'IBM Plex Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 17px;
+line-height: 21px;
+
+
+color: #596778;
+}
+
+.Ev{
+
+width: 597px;
+height: 23px;
+left: calc(50% - 597px/2 - 90.5px);
+margin-left: 10px;
+margin-top: 0px;
+
+
+font-family: 'Rubik';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 26px;
+
+color: #475F7B;
+text-transform: none;
+}
+
+table{
+
+left: 270px;
+top: 350px;
+bottom: 64px;
+width: 1118px;
+margin-left:10px;
+
+background-color: #fff;
+text-align: center;
+table-layout: fixed
+}
+
+thead tr{
+height: 50px;
+left: 0px;
+right: 0px;
+top: 126px;
+
+ font-family: 'Rubik';
+ font-style: normal;
+ font-weight: 400;
+ font-size: 15px;
+ line-height: 18px;
+ /* identical to box height */
+
+
+ color: #475F7B;
+
+}
+ tbody td{
+font-family: 'IBM Plex Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 21px;
+/* identical to box height, or 140% */
+
+
+color: #727E8C;
+ }
+ tbody tr{
+ height: 30px;
+ outline: 0.3px solid #C7CFD6;
+ border-collapse: collapse;
+ padding: 0px;
+ }
+
+ tbody tr:hover {
+ filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.12));
+ background-color: #E7EDF2;
+ }
