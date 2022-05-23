@@ -6,31 +6,32 @@
   <p><a [routerLink]="'/users'">Users</a>
   <p><a [routerLink]="'/moderation'">Moderation</a>
 </div>
-<div>
-  <div>
+<div class="userDetail">
+  <div class="userInfo">
     <h2>Main information</h2>
 
-    <div>
+    <div class="name">
       <label>Name</label>
-      <span>{{user.name}}</span>
+      <p>{{user.name}}</p>
     </div>
 
-    <div>
+    <div class="email">
       <label>Email</label>
-      <span>{{user.email}}</span>
+      <p>{{user.email}}</p>
     </div>
 
-    <div>
+    <div class="phone">
       <label>Phone</label>
-      <span>{{user.phone}}</span>
+      <p>{{user.phone}}</p>
     </div>
 
-    <div>
+    <div class="work">
       <label>Work</label>
-      <span>{{user.work}}</span>
+      <p>{{user.work}}</p>
     </div>
 
     <div>
+      <h4 class="Ev">Events</h4>
       <table>
         <thead>
         <tr>
