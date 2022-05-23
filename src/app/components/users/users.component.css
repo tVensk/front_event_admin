@@ -42,6 +42,7 @@ app-main-screen{
   width: 259px;
   height: 923px;
   background-color: #F2F4F4;
+  outline: 1px solid #C7CFD6;
 
 }
 .vertical-menu p img{
