@@ -7,8 +7,35 @@
   <p><a [routerLink]="'/moderation'">Moderation</a>
 </div>
 <div>
+  <button class="delete" (click)="deleteEvent(event)">Delete event</button>
   <div>
+    <h2>Event №{{event.id}}</h2>
     <div>
+      <label>Creator</label>
+      <span>{{event.creator.name}}</span>
+    </div>
+    <div>
+      <label>Phone</label>
+      <span>{{event.creator.phone}}</span>
+    </div>
+    <div>
+      <label>Event address</label>
+      <span>{{event.address}}</span>
+    </div>
+    <div>
+      <label>Start</label>
+      <span>{{parseDate(event.startDate)}}</span>
+    </div>
+    <div>
+      <label>End</label>
+      <span>{{parseDate(event.startDate)}}</span>
+    </div>
+    <div>
+      <label>Event information</label>
+      <span>{{event.description}}</span>
+    </div>
+    <div>
+      <button class="info" (click)="showCreatorInfo(event.creator)">Creator information</button>
       <table>
         <thead>
         <tr>
@@ -21,7 +48,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let user of users" (click)="showUserDetails(user)">
+        <tr *ngFor="let user of event.users">
           <td>{{user.id}}</td>
           <td>{{user.name}}</td>
           <td>{{user.creatorEvents.length}}</td>
@@ -31,12 +58,6 @@
         </tr>
         </tbody>
       </table>
-      <hr>
-      <ul>
-        <li *ngFor="let p of pages; let i=index">
-          <a (click)="setPage(i,$event)">{{i}}</a>
-        </li>
-      </ul>
     </div>
   </div>
 </div>

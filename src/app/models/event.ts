@@ -4,7 +4,6 @@ export interface Event {
   archive: boolean;
   confirmation: boolean;
   creator: User;
-  date: Date;
   description: string;
   id: number;
   image: string;
@@ -12,6 +11,8 @@ export interface Event {
   longitude: number;
   name: string;
   price: number;
+  startDate: Date,
+  endDate:Date,
   status: string;
   users: User[];
   address: string;
