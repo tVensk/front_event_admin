@@ -24,7 +24,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let event of events">
+        <tr *ngFor="let event of events" (click)="showEventDetails(event)">
           <td>{{event.id}}</td>
           <td>{{parseDate(event.startDate)}}</td>
           <td>{{parseDate(event.endDate)}}</td>
