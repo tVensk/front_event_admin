@@ -32,7 +32,7 @@
           <td>{{event.address}}</td>
           <td>{{event.name}}</td>
           <td>{{event.price}}</td>
-          <td>{{event.status}}</td>
+          <td [ngClass]="getStatusStyle(event.status)">{{event.status}}</td>
         </tr>
         </tbody>
       </table>

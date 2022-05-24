@@ -28,18 +28,18 @@ export class StatisticsComponent implements OnInit {
   ngOnInit(): void {
     this.eventService.getAllEvents().subscribe((events: any) => {
 
-      this.events = events;
+      this.events = events.content;
       this.eventService.parseEventsStatus(this.events);
 
       this.eventsPriceData = [
-        {name: "Free", value: this.countFreeEvents(events)},
-        {name: "Paid", value: this.countPaidEvents(events)},
+        {name: "Free", value: this.countFreeEvents(events.content)},
+        {name: "Paid", value: this.countPaidEvents(events.content)},
       ];
 
       this.eventsStatusData = [
-        {name: "Scheduled", value: this.countEventStatus(events, "SCHEDULED")},
-        {name: "In process", value: this.countEventStatus(events, "IN PROGRESS")},
-        {name: "Ended", value: this.countEventStatus(events, "ENDED")}
+        {name: "Scheduled", value: this.countEventStatus(events.content, "SCHEDULED")},
+        {name: "In process", value: this.countEventStatus(events.content, "IN PROGRESS")},
+        {name: "Ended", value: this.countEventStatus(events.content, "ENDED")}
       ]
 
       this.userService.getUsers(0).subscribe((res: any) => {

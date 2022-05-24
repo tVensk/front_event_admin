@@ -146,6 +146,18 @@ color: #727E8C;
  filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.12));
  background-color: #E7EDF2;
  }
+
+
+
+.scheduled{
+  background-color: yellow;
+}
+.in-progress{
+  background-color: green;
+}
+.ended{
+  background-color: red;
+}
 /*.danuas {
   margin-left: 950px;
    margin-top: 405px;

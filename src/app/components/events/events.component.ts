@@ -45,7 +45,7 @@ export class EventsComponent implements OnInit {
   }
 
   getEvents(page: number) {
-    this.eventsService.getEvents(this.page).subscribe((res: any) => {
+    this.eventsService.getEvents(page).subscribe((res: any) => {
       this.events = res.content;
       this.pages = new Array(res.totalPages);
       this.events.forEach((event) => {
@@ -65,5 +65,12 @@ export class EventsComponent implements OnInit {
 
   showEventDetails(event: Event) {
     this.router.navigate(['events/details'], {state: event}).then(() => console.log("Navigated to event details with event", event));
+  }
+
+  getStatusStyle(status: string):string {
+    if (status == "SCHEDULED") return "scheduled";
+    if (status == "IN PROGRESS") return "in-progress";
+    if (status == "ENDED") return "ended";
+    return "";
   }
 }

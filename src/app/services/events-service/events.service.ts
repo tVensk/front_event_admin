@@ -3,8 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {SessionToken} from "../../models/session-token";
 import {Event} from "../../models/event";
 
-const BASE_PAGE_URL: string = "http://172.20.13.76:8080/api/admin/event/confirmed";
-const BASE_URL: string = "http://172.20.13.76:8080/api/event/all/active"
+const BASE_URL: string = "http://172.20.13.76:8080/api/admin/event"
 
 @Injectable({
   providedIn: 'root'
@@ -16,10 +15,19 @@ export class EventsService {
   }
 
   getEvents(page: number) {
-    return this.http.get(BASE_PAGE_URL + "?page=" + page, {headers: {"Authorization": SessionToken.sessionToken}});
+    return this.http.get(BASE_URL + "/confirmed?page=" + page, {headers: {"Authorization": SessionToken.sessionToken}});
   }
+
   getAllEvents() {
-    return this.http.get(BASE_URL, {headers: {"Authorization": SessionToken.sessionToken}});
+    return this.http.get(BASE_URL + "/all", {headers: {"Authorization": SessionToken.sessionToken}});
+  }
+
+  getNotAcceptedEvents(page: number) {
+    return this.http.get(BASE_URL + "/unconfirmed?page=" + page, {headers: {"Authorization": SessionToken.sessionToken}});
+  }
+
+  getRejectedEvents(page: number) {
+    return this.http.get(BASE_URL + "/nullconfirmed?page=" + page, {headers: {"Authorization": SessionToken.sessionToken}});
   }
 
   parseEventsLocation(events: Event[]) {

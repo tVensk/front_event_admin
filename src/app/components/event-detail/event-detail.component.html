@@ -48,10 +48,10 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let user of event.users">
+        <tr *ngFor="let user of event.users" (click)="showUserDetails(user)">
           <td>{{user.id}}</td>
           <td>{{user.name}}</td>
-          <td>{{user.creatorEvents.length}}</td>
+          <td *ngIf="user.creatorEvents">{{user.creatorEvents.length}}</td>
           <td>{{user.email}}</td>
           <td>{{user.phone}}</td>
           <td>{{user.work}}</td>

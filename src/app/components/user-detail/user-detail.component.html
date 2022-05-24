@@ -8,6 +8,7 @@
 </div>
 <div class="userDetail">
   <div class="userInfo">
+    <button class="delete" (click)="deleteUser(user)">Delete user</button>
     <h2>Main information</h2>
 
     <div class="name">
@@ -52,7 +53,7 @@
           <td>{{event.address}}</td>
           <td>{{event.name}}</td>
           <td>{{event.price}}</td>
-          <td>{{event.status}}</td>
+          <td [ngClass]="getStatusStyle(event.status)">{{event.status}}</td>
         </tr>
         </tbody>
       </table>

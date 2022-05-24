@@ -6,5 +6,49 @@
   <p><a [routerLink]="'/users'">Users</a>
   <p><a [routerLink]="'/moderation'">Moderation</a>
 </div>
-<p>MODERATION</p>
+<div>
+  <div class="eventList">
+    <div>
+      <h4 class="Ev">Moderation</h4>
+      <div class="sort-buttons">
+        <button *ngIf="!showNotAccepted" (click)="showNew()">New</button>
+        <button *ngIf="showNotAccepted" (click)="showEdit()">Edit</button>
+      </div>
+      <table>
+        <thead>
+        <tr>
+          <td>Event ID</td>
+          <td>Start</td>
+          <td>End</td>
+          <td>Creator</td>
+          <td>Location</td>
+          <td>Name</td>
+          <td>Price</td>
+          <td>Status</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let event of events" (click)="goToModeration(event)">
+          <td>{{event.id}}</td>
+          <td>{{parseDate(event.startDate)}}</td>
+          <td>{{parseDate(event.endDate)}}</td>
+          <td>{{event.creator.name}}</td>
+          <td>{{event.address}}</td>
+          <td>{{event.name}}</td>
+          <td>{{event.price}}</td>
+          <td [ngClass]="getStatusStyle(event.status)">{{event.status}}</td>
+        </tr>
+        </tbody>
+      </table>
+      <hr>
+      <ul>
+        <li *ngFor="let p of pages; let i=index">
+          <a (click)="setPage(i-1,$event)"><</a>
+          <a (click)="setPage(i,$event)">{{i + 1}}</a>
+          <a (click)="setPage(i+1,$event)">></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 <router-outlet></router-outlet>
