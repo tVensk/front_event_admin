@@ -95,8 +95,8 @@ export class ModerationComponent implements OnInit {
 
   parseModeratedEventsStatus(events:Event[]){
     events.forEach((event)=>{
-      if (event.confirmation==null) event.status = "NEW"
-      if (!event.confirmation) event.status = "EDITING"
+      if (event.confirmation == null) event.status = "NEW";
+      if (event.confirmation == false) event.status = "EDITING";
     })
   }
 
