@@ -1,0 +1,44 @@
+<app-app-menu></app-app-menu>
+<button class="approve" (click)="approve(event)">Approve</button>
+<button class="decline" (click)="decline(event)">Decline</button>
+<div>
+  <div *ngIf="event.id">
+    <div>
+      <label>Photo</label>
+      <p>{{event.image}}</p>
+    </div>
+    <div>
+      <label>Name</label>
+      <p>{{event.name}}</p>
+    </div>
+    <div>
+      <label>Creator (ID)</label>
+      <p>{{event.creator.name}} {{event.creator.id}}</p>
+    </div>
+    <div>
+      <label>Address</label>
+      <p>{{event.address}}</p>
+    </div>
+    <div>
+      <label>Start</label>
+      <p>{{eventService.parseDate(event.startDate)}}</p>
+    </div>
+    <div>
+      <label>End</label>
+      <p>{{eventService.parseDate(event.endDate)}}</p>
+    </div>
+    <div>
+      <label>Description</label>
+      <p>{{event.description}}</p>
+    </div>
+    <div>
+      <label>Price</label>
+      <p>{{event.price}}</p>
+    </div>
+  </div>
+  <div>
+    <label>Comment</label>
+    <input type="text"/>
+  </div>
+</div>
+<router-outlet></router-outlet>

@@ -19,8 +19,8 @@
         <tbody>
         <tr *ngFor="let event of events" (click)="showEventDetails(event)">
           <td>{{event.id}}</td>
-          <td>{{parseDate(event.startDate)}}</td>
-          <td>{{parseDate(event.endDate)}}</td>
+          <td>{{eventsService.parseDate(event.startDate)}}</td>
+          <td>{{eventsService.parseDate(event.endDate)}}</td>
           <td>{{event.creator.name}}</td>
           <td>{{event.address}}</td>
           <td>{{event.name}}</td>

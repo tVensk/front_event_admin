@@ -17,7 +17,7 @@ export class EventsComponent implements OnInit {
 
   constructor(
     private userService: UsersService,
-    private eventsService: EventsService,
+    public eventsService: EventsService,
     private router: Router
   ) {
   }
@@ -56,11 +56,6 @@ export class EventsComponent implements OnInit {
       this.eventsService.parseEventsStatus(this.events);
       this.eventsService.parseEventsLocation(this.events);
     });
-  }
-
-  parseDate(dateString: Date) {
-    let date = new Date(dateString);
-    return date.getDate() + '-' + (date.getMonth() + 1) + '-' + date.getFullYear();
   }
 
   showEventDetails(event: Event) {

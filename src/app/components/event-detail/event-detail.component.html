@@ -1,10 +1,8 @@
 <app-app-menu></app-app-menu>
 <button class="delete" (click)="deleteEvent(event)">Delete event</button>
-<button class="info" (click)="showCreatorInfo(event.creator)">Creator information</button>
+<button class="info" (click)="showUserDetails(event.creator)">Creator information</button>
 <div class="eventDetail">
- <!-- <button class="delete" (click)="deleteEvent(event)">Delete event</button>
-  <button class="info" (click)="showCreatorInfo(event.creator)">Creator information</button>-->
-  <div class="eventInfo">
+  <div class="eventInfo" *ngIf="event.creator">
     <h2>Event №{{event.id}}</h2>
     <div class="creator">
       <label>Creator</label>
@@ -20,17 +18,17 @@
     </div>
     <div class="start">
       <label>Start</label>
-      <p>{{parseDate(event.startDate)}}</p>
+      <p>{{eventService.parseDate(event.startDate)}}</p>
     </div>
     <div class="end">
       <label>End</label>
-      <p>{{parseDate(event.startDate)}}</p>
+      <p>{{eventService.parseDate(event.startDate)}}</p>
     </div>
     <div class="inform">
       <label>Event information</label>
       <p>{{event.description}}</p>
     </div>
-        <div>
+    <div>
       <h4 class="Us">Users</h4>
       <table>
         <thead>

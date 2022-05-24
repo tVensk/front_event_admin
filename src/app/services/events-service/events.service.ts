@@ -30,6 +30,14 @@ export class EventsService {
     return this.http.get(BASE_URL + "/nullconfirmed?page=" + page, {headers: {"Authorization": SessionToken.sessionToken}});
   }
 
+  approveEvent(id: number) {
+    return this.http.post("http://172.20.13.76:8080/api/admin/approve", {"id": id}, {headers: {"Authorization": SessionToken.sessionToken}});
+  }
+
+  declineEvent(id: number) {
+    return this.http.post("http://172.20.13.76:8080/api/admin/decline", {"id": id}, {headers: {"Authorization": SessionToken.sessionToken}});
+  }
+
   parseEventsLocation(events: Event[]) {
     events.forEach((event) => {
       if (event.latitude & event.longitude) {
@@ -60,5 +68,10 @@ export class EventsService {
 
   deleteEvent(event: Event) {
     //TODO:delete implementation
+  }
+
+  parseDate(dateString: Date) {
+    let date = new Date(dateString);
+    return date.getDate() + '-' + (date.getMonth() + 1) + '-' + date.getFullYear();
   }
 }

@@ -18,7 +18,7 @@ export class ModerationComponent implements OnInit {
 
   constructor(
     private userService: UsersService,
-    private eventsService: EventsService,
+    public eventsService: EventsService,
     private router: Router
   ) { }
 
@@ -54,13 +54,8 @@ export class ModerationComponent implements OnInit {
     }
   }
 
-  parseDate(dateString: Date) {
-    let date = new Date(dateString);
-    return date.getDate() + '-' + (date.getMonth() + 1) + '-' + date.getFullYear();
-  }
-
   goToModeration(event: Event) {
-
+    this.router.navigate(['moderation/event'], {state: event}).then(() => console.log("Navigated to event moderation with event", event));
   }
 
   showNew() {

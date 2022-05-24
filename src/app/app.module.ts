@@ -23,6 +23,7 @@ import { UserDetailComponent } from './components/user-detail/user-detail.compon
 import { EventDetailComponent } from './components/event-detail/event-detail.component';
 import {NgxChartsModule} from "@swimlane/ngx-charts";
 import { AppMenuComponent } from './components/app-menu/app-menu.component';
+import { ModerationDetailsComponent } from './components/moderation-details/moderation-details.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { AppMenuComponent } from './components/app-menu/app-menu.component';
     ModerationComponent,
     UserDetailComponent,
     EventDetailComponent,
-    AppMenuComponent
+    AppMenuComponent,
+    ModerationDetailsComponent
   ],
   imports: [
     BrowserModule,

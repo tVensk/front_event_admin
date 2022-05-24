@@ -16,38 +16,33 @@ export class EventDetailComponent implements OnInit {
 
   constructor(
     private userService: UsersService,
-    private eventService: EventsService,
+    public eventService: EventsService,
     private router: Router
   ) {
   }
 
   ngOnInit(): void {
     this.event = history.state;
-    this.userService.getUserById(this.event.creator.id).subscribe((user: any) => {
-      this.event.creator = user;
-      this.event.users.forEach((user) => {
-        this.userService.getUserById(user.id).subscribe((userById: any) => {
-          let userIndex = this.event.users.findIndex(user => user.id == userById.id);
-          this.event.users[userIndex] = userById;
+    if (this.event.creator) {
+      this.userService.getUserById(this.event.creator.id).subscribe((user: any) => {
+        this.event.creator = user;
+        this.event.users.forEach((user) => {
+          this.userService.getUserById(user.id).subscribe((userById: any) => {
+            let userIndex = this.event.users.findIndex(user => user.id == userById.id);
+            this.event.users[userIndex] = userById;
+          })
         })
       })
-      console.log(this.event);
-    })
+    } else {
+      this.router.navigate(['events']).then(() => console.log("Navigated to events page due to event edit abort"));
+    }
+
   }
 
   deleteEvent(event: Event) {
     if (confirm("Are you sure to delete " + event.name)) {
       this.eventService.deleteEvent(event);
     }
-  }
-
-  parseDate(dateString: Date) {
-    let date = new Date(dateString);
-    return date.getDate() + '-' + (date.getMonth() + 1) + '-' + date.getFullYear();
-  }
-
-  showCreatorInfo(creator: User) {
-    this.router.navigate(['users/details'], {state: creator}).then(() => console.log("Navigated to user details with user", creator));
   }
 
   showUserDetails(user: User) {

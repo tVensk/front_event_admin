@@ -23,8 +23,12 @@ export class UserDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.user = history.state;
-    this.eventService.parseEventsStatus(this.user.creatorEvents);
-    this.eventService.parseEventsLocation(this.user.creatorEvents);
+    if (this.user.id) {
+      this.eventService.parseEventsStatus(this.user.creatorEvents);
+      this.eventService.parseEventsLocation(this.user.creatorEvents);
+    } else {
+      this.router.navigate(['users']).then(() => console.log("Navigated to users page due to user info abort"));
+    }
   }
 
   parseDate(dateString: Date) {
@@ -42,7 +46,7 @@ export class UserDetailComponent implements OnInit {
     }
   }
 
-  getStatusStyle(status: string):string {
+  getStatusStyle(status: string): string {
     if (status == "SCHEDULED") return "scheduled";
     if (status == "IN PROGRESS") return "in-progress";
     if (status == "ENDED") return "ended";

@@ -8,6 +8,7 @@ import {ModerationComponent} from "./components/moderation/moderation.component"
 import {UserDetailComponent} from "./components/user-detail/user-detail.component";
 import {EventDetailComponent} from "./components/event-detail/event-detail.component";
 import {AuthGuard} from "./services/login-service/auth.guard";
+import {ModerationDetailsComponent} from "./components/moderation-details/moderation-details.component";
 
 const routes: Routes = [
   {path: 'events', component: EventsComponent, canActivate: [AuthGuard]},
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path: 'stats', component: StatisticsComponent, canActivate: [AuthGuard]},
   {path: 'moderation', component: ModerationComponent, canActivate: [AuthGuard]},
   {path: 'users/details', component: UserDetailComponent, canActivate: [AuthGuard]},
-  {path: 'events/details', component: EventDetailComponent, canActivate: [AuthGuard]}
+  {path: 'events/details', component: EventDetailComponent, canActivate: [AuthGuard]},
+  {path: 'moderation/event', component: ModerationDetailsComponent, canActivate: [AuthGuard]},
 ];
 
 @NgModule({

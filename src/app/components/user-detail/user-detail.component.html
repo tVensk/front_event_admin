@@ -1,6 +1,6 @@
 <app-app-menu></app-app-menu>
 <div class="userDetail">
-  <div class="userInfo">
+  <div class="userInfo" *ngIf="user.id">
     <button class="delete" (click)="deleteUser(user)">Delete user</button>
     <h2>Main information</h2>
 
