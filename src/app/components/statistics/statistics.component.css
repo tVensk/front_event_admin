@@ -40,8 +40,9 @@ app-main-screen{
   margin-left: -6px;
   padding: 0;
   width: 259px;
-  height: 923px;
+  height: 1023px;
   background-color: #F2F4F4;
+  outline: 1px solid #C7CFD6;
 
 }
 .vertical-menu p img{
@@ -68,8 +69,44 @@ app-main-screen{
 }
 
 .chart-column{
-  width: fit-content;
+  margin-left: 253px;
+  margin-top: 0px;
+  width: 1258px;
+  height: 1023px;
+  background-color: #F2F4F4;
+  outline: 1px solid #C7CFD6;
 }
+
+h5{
+
+width: 331px;
+height: 44px;
+left: 250px;
+margin-top: 0px;
+margin-left: 10px;
+padding-top: 30px;
+
+font-family: 'Rubik';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 44px;
+text-transform: none;
+/* identical to box height, or 138% */
+
+
+color: #475F7B;
+
+}
+/*.chart-column{
+  width: fit-content;
+}*/
 .chart{
   display: flex;
+font-family: 'IBM Plex Sans';
+font-style: normal;
+   /* identical to box height */
+
+
+  color: #475F7B;
 }

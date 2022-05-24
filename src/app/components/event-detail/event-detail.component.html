@@ -6,36 +6,39 @@
   <p><a [routerLink]="'/users'">Users</a>
   <p><a [routerLink]="'/moderation'">Moderation</a>
 </div>
-<div>
-  <button class="delete" (click)="deleteEvent(event)">Delete event</button>
-  <div>
+<button class="delete" (click)="deleteEvent(event)">Delete event</button>
+<button class="info" (click)="showCreatorInfo(event.creator)">Creator information</button>
+<div class="eventDetail">
+ <!-- <button class="delete" (click)="deleteEvent(event)">Delete event</button>
+  <button class="info" (click)="showCreatorInfo(event.creator)">Creator information</button>-->
+  <div class="eventInfo">
     <h2>Event №{{event.id}}</h2>
-    <div>
+    <div class="creator">
       <label>Creator</label>
-      <span>{{event.creator.name}}</span>
+      <p>{{event.creator.name}}</p>
     </div>
-    <div>
+    <div class="phone">
       <label>Phone</label>
-      <span>{{event.creator.phone}}</span>
+      <p>{{event.creator.phone}}</p>
     </div>
-    <div>
+    <div class="address">
       <label>Event address</label>
-      <span>{{event.address}}</span>
+      <p>{{event.address}}</p>
     </div>
-    <div>
+    <div class="start">
       <label>Start</label>
-      <span>{{parseDate(event.startDate)}}</span>
+      <p>{{parseDate(event.startDate)}}</p>
     </div>
-    <div>
+    <div class="end">
       <label>End</label>
-      <span>{{parseDate(event.startDate)}}</span>
+      <p>{{parseDate(event.startDate)}}</p>
     </div>
-    <div>
+    <div class="inform">
       <label>Event information</label>
-      <span>{{event.description}}</span>
+      <p>{{event.description}}</p>
     </div>
-    <div>
-      <button class="info" (click)="showCreatorInfo(event.creator)">Creator information</button>
+        <div>
+      <h4 class="Us">Users</h4>
       <table>
         <thead>
         <tr>
