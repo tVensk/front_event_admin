@@ -33,7 +33,7 @@
       <ul>
         <li *ngFor="let p of pages; let i=index">
           <a (click)="setPage(i-1,$event)"><</a>
-          <a (click)="setPage(i,$event)">{{i + 1}}</a>
+          <a class="now" (click)="setPage(i,$event)">{{i + 1}}</a>
           <a (click)="setPage(i+1,$event)">></a>
         </li>
       </ul>

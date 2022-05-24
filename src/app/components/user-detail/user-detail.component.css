@@ -1,78 +1,5 @@
-
-h3 {
-  width: 169.07px;
-  height: 22.98px;
-  left: calc(50% - 169.07px / 2 - 19.43px);
-  top: 19.45px;
-
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 26px;
-
-  color: #475F7B;
-}
-
-h4 {
-  width: 74px;
-  height: 12.38px;
-  left: calc(50% - 74px / 2 - 62.5px);
-  top: 106.96px;
-
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-
-  color: #BAC0C7;
-
-
-}
-
-app-main-screen {
-
-}
-
-.vertical-menu {
-  float: left;
-  margin-left: -6px;
-  padding: 0;
-  width: 259px;
-  height: 923px;
-  background-color: #F2F4F4;
-  outline: 1px solid #C7CFD6;
-}
-
-.vertical-menu p img {
-  margin-top: -25px;
-  width: 22px;
-  height: 22px;
-}
-
-.vertical-menu a {
-  padding-left: 24px;
-  color: #475F7B;
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 18px;
-  display: block;
-  padding: 12px;
-  text-decoration: none;
-}
-
-.vertical-menu a:hover {
-  background-color: #fff;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
 .userInfo{
-  height: 700px;
+/*  height: 1023px;*/
   margin-left: 50px;
   top: 50px;
 }
@@ -97,9 +24,10 @@ color: #475F7B;
 
 }
 .userDetail{
+
   margin-left: 253px;
   margin-top: 0px;
-  height: 923px;
+  height: 1023px;
   background-color: #F2F4F4;
   outline: 1px solid #C7CFD6;
 }
@@ -164,6 +92,35 @@ color: #475F7B;
 text-transform: none;
 }
 
+.delete{
+width: 261px;
+height: 39px;
+margin-right: 160px;
+  margin-top: 70px;
+  float: right;
+
+font-family: 'IBM Plex Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 29px;
+/* identical to box height, or 193% */
+
+text-align: center;
+
+color: #FFFFFF;
+
+background: #007AFF;
+border-radius: 4px;
+border: #007AFF;
+}
+.delete:hover { background: #296fcc; }
+.delete:active {
+  background: #007AFF;
+  box-shadow: 0 3px  #007AFF inset;
+}
+
+
 table{
 
 left: 270px;
@@ -222,11 +179,11 @@ color: #727E8C;
  }
 
 .scheduled{
-  background-color: yellow;
+  text-shadow: 5px 5px 10px #FDAC41;
 }
 .in-progress{
-  background-color: green;
+  text-shadow: 5px 5px 10px #39DA8A;
 }
 .ended{
-  background-color: red;
+  text-shadow: 5px 5px 10px #FF5B5C;
 }

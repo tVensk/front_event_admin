@@ -1,72 +1,9 @@
 
-h3{
-width: 169.07px;
-height: 22.98px;
-left: calc(50% - 169.07px/2 - 19.43px);
-top: 19.45px;
-
-font-family: 'Rubik';
-font-style: normal;
-font-weight: 400;
-font-size: 22px;
-line-height: 26px;
-
-color: #475F7B;
-}
-h4{
-width: 74px;
-height: 12.38px;
-left: calc(50% - 74px/2 - 62.5px);
-top: 106.96px;
-
-font-family: 'Rubik';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 14px;
-letter-spacing: 1px;
-text-transform: uppercase;
-
-color: #BAC0C7;
-
-
-
-}
-app-main-screen{
-
-     }
-.vertical-menu {
-  float: left;
-  margin-left: -6px;
-  padding: 0;
-  width: 259px;
-  height: 923px;
-  background-color: #F2F4F4;
-  outline: 1px solid #C7CFD6;
-  }
-
-.vertical-menu a {
-  padding-left: 24px;
-  color: #475F7B;
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 18px;
-  display: block;
-  padding: 12px;
-  text-decoration: none;
-}
-
-.vertical-menu a:hover {
-  background-color: #fff;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
 
 .eventList{
   margin-left: 253px;
   margin-top: 0px;
-  height: 923px;
+  height: 1023px;
   background-color: #F2F4F4;
   outline: 1px solid #C7CFD6;
 
@@ -147,55 +84,42 @@ color: #727E8C;
  background-color: #E7EDF2;
  }
 
-
-
 .scheduled{
-  background-color: yellow;
+  text-shadow: 5px 5px 10px #FDAC41;
 }
 .in-progress{
-  background-color: green;
+  text-shadow: 5px 5px 10px #39DA8A;
 }
 .ended{
-  background-color: red;
+  text-shadow: 5px 5px 10px #FF5B5C;
 }
-/*.danuas {
-  margin-left: 950px;
-   margin-top: 405px;
-  display: flex;
-  *//*background: #fff;*//*
+ul {
+    display: inline-block;
+    padding-left: 1020px;
+    padding-top: 10px;
+    margin: 0;
 }
-.danuas li{
-  list-style: none;
-
-  *//* identical to box height *//*
-}
-.danuas li a{
-  display: block;
-  width: 35px;
-  height: 35px;
-  text-align: center;
-  padding-top: 10px;
-
-
-*//*  line-height: 35px;*//*
-  background-color: #F2F4F4;
-    border-radius: 4px;
-     font-family: 'Mulish';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 18px;
-  color: #3F3356;
-  text-decoration: none;
-}
- .danuas li:hover {
- filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.12));
- background-color: #E7EDF2;
- outline: 1px solid #C7CFD6;
- border-radius: 4px;
+ul li {
+  display: inline;
+  border-radius: 8px;
+  outline: 1px solid #C7CFD6;
   }
-
- .danuas li .deystvuyus{
+ ul li a{
+    color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        background: #F2F4F4;
+        border-radius: 8px;
+}
+ ul li a:hover {
+ filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.12));
+ background-color: #F2F4F4;
+ outline: 1px solid #C7CFD6;
+ border-radius: 8px;
+  }
+ ul li a.now{
    background-color: #5A8DEE;
-   color: #F2F4F4;
- }*/
+   color: #fff;
+ }
+

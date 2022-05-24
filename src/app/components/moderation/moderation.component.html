@@ -2,10 +2,10 @@
 <div>
   <div class="eventList">
     <div>
-      <h4 class="Ev">Moderation</h4>
+      <h4 class="Mod">Moderation</h4>
       <div class="sort-buttons">
-        <button *ngIf="!showNotAccepted" (click)="showNew()">New</button>
-        <button *ngIf="showNotAccepted" (click)="showEdit()">Edit</button>
+        <button class="b1" *ngIf="!showNotAccepted" (click)="showNew()">New</button>
+        <button class="b2" *ngIf="showNotAccepted" (click)="showEdit()">Edit</button>
       </div>
       <table>
         <thead>
@@ -37,7 +37,7 @@
       <ul>
         <li *ngFor="let p of pages; let i=index">
           <a (click)="setPage(i-1,$event)"><</a>
-          <a (click)="setPage(i,$event)">{{i + 1}}</a>
+          <a class="now" (click)="setPage(i,$event)">{{i + 1}}</a>
           <a (click)="setPage(i+1,$event)">></a>
         </li>
       </ul>
