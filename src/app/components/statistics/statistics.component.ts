@@ -1,8 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {EventsService} from "../../services/events-service/events.service";
-import {User} from "../../models/user";
-import {Event} from "../../models/event";
-import {UsersService} from "../../services/users-service/users.service";
+import {StatService} from "../../services/stat-service/stat.service";
 
 @Component({
   selector: 'app-statistics',
@@ -11,70 +8,32 @@ import {UsersService} from "../../services/users-service/users.service";
 })
 export class StatisticsComponent implements OnInit {
 
-  events!: Event[];
-  users!: User[];
   eventsPriceData: any;
   eventsStatusData: any;
   entityData: any;
 
-
-  constructor(
-    private eventService: EventsService,
-    private userService: UsersService
-  ) {
+  constructor(private statService: StatService) {
   }
-
 
   ngOnInit(): void {
-    this.eventService.getAllEvents().subscribe((events: any) => {
-
-      this.events = events.content;
-      this.eventService.parseEventsStatus(this.events);
-
+    this.statService.getPriceStats().subscribe((res: any) => {
       this.eventsPriceData = [
-        {name: "Free", value: this.countFreeEvents(events.content)},
-        {name: "Paid", value: this.countPaidEvents(events.content)},
+        {name: "Free", value: res['Free']},
+        {name: "Paid", value: res['Paid']},
       ];
-
+    });
+    this.statService.getStatusStats().subscribe((res: any) => {
       this.eventsStatusData = [
-        {name: "Scheduled", value: this.countEventStatus(events.content, "SCHEDULED")},
-        {name: "In process", value: this.countEventStatus(events.content, "IN PROGRESS")},
-        {name: "Ended", value: this.countEventStatus(events.content, "ENDED")}
+        {name: "Scheduled", value: res['Scheduled']},
+        {name: "In process", value: res['In Process']},
+        {name: "Ended", value: res['Ended']}
+      ];
+    });
+    this.statService.getEntitiesData().subscribe((res: any) => {
+      this.entityData = [
+        {name: "Users", value: res['Users']},
+        {name: "Events", value: res['Events']}
       ]
-
-      this.userService.getUsers(0).subscribe((res: any) => {
-        this.users = res.content;
-        this.entityData = [
-          {name: "Users", value: res.content.length},
-          {name: "Events", value: events.length}
-        ]
-      })
-    })
+    });
   }
-
-
-  countFreeEvents(events: Event[]) {
-    let result: number = 0;
-    events.forEach((event) => {
-      if (event.price == 0) result += 1;
-    })
-    return result;
-  }
-
-  countPaidEvents(events: Event[]) {
-    let result: number = 0;
-    events.forEach((event) => {
-      if (event.price > 0) result += 1;
-    })
-    return result;
-  }
-
-  countEventStatus(events: Event[], status: string) {
-    let result: number = 0;
-    events.forEach((event) => {
-      if (event.status == status) result += 1
-    })
-    return result;
-  }
-
 }
