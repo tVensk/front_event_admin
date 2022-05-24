@@ -10,7 +10,7 @@ const BASE_URL: string = "http://172.20.13.76:8080/api/login";
 export class LoginService {
 
   isLoggedIn = false;
-  redirectUrl: string | null = null;
+  redirectUrl: string = '/index';
 
   constructor(private http: HttpClient) {
   }
