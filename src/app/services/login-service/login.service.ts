@@ -9,6 +9,8 @@ const BASE_URL: string = "http://172.20.13.76:8080/api/login";
 })
 export class LoginService {
 
+  isLoggedIn = false;
+  redirectUrl: string | null = null;
 
   constructor(private http: HttpClient) {
   }
@@ -19,5 +21,10 @@ export class LoginService {
       "password": password
     }, {observe: "response"}).toPromise();
     SessionToken.sessionToken = data.body.token;
+    this.isLoggedIn = true;
+  }
+
+  logout(): void {
+    this.isLoggedIn = false;
   }
 }

@@ -13,8 +13,8 @@ export class AdminLoginComponent implements OnInit {
   isAuthenticated: boolean = false;
   authenticationError: boolean = false;
 
-  constructor(private loginService: LoginService,
-              private router:Router) {
+  constructor(public loginService: LoginService,
+              public router:Router) {
   }
 
   ngOnInit(): void {
@@ -28,9 +28,10 @@ export class AdminLoginComponent implements OnInit {
         this.isAuthenticated = false;
       }, 1500)
     }).finally(() => {
-      if (!this.authenticationError) {
-        this.isAuthenticated = true;
-        this.router.navigate(['index']);
+      if (this.loginService.isLoggedIn) {
+        const redirectUrl = this.loginService.redirectUrl;
+
+        this.router.navigate([redirectUrl]);
       }
     });
   }

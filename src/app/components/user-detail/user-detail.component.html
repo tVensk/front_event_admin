@@ -1,11 +1,4 @@
-<div class="vertical-menu">
-  <h3>EventAdmin</h3>
-  <p><a [routerLink]="'/events'">Events</a>
-  <h4>basic</h4>
-  <p><a [routerLink]="'/stats'">Statistics</a>
-  <p><a [routerLink]="'/users'">Users</a>
-  <p><a [routerLink]="'/moderation'">Moderation</a>
-</div>
+<app-app-menu></app-app-menu>
 <div class="userDetail">
   <div class="userInfo">
     <button class="delete" (click)="deleteUser(user)">Delete user</button>

@@ -22,6 +22,7 @@ import {UsersService} from "./services/users-service/users.service";
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
 import { EventDetailComponent } from './components/event-detail/event-detail.component';
 import {NgxChartsModule} from "@swimlane/ngx-charts";
+import { AppMenuComponent } from './components/app-menu/app-menu.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {NgxChartsModule} from "@swimlane/ngx-charts";
     StatisticsComponent,
     ModerationComponent,
     UserDetailComponent,
-    EventDetailComponent
+    EventDetailComponent,
+    AppMenuComponent
   ],
   imports: [
     BrowserModule,

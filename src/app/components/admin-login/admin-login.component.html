@@ -1,7 +1,7 @@
 <div *ngIf="authenticationError">
   <strong>Failed to sign in!</strong> Please check your credentials and try again.
 </div>
-<div *ngIf="!isAuthenticated && !authenticationError">
+<div *ngIf="!loginService.isLoggedIn">
   <img src="/assets/img/background.jpg" class="background" alt="image"/>
   <header>
     <h1>WELCOME TO EVENT</h1>
