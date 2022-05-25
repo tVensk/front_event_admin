@@ -1,46 +1,47 @@
 <app-app-menu></app-app-menu>
 <div class="modDet">
-<button class="approve" (click)="approve(event)">Approve</button>
-<button class="decline" (click)="decline(event)">Decline</button>
-<div class="details">
-  <div *ngIf="event.id">
-    <div class="photo">
-      <label>Photo</label>
-      <p>{{event.image}}</p>
+  <button routerLink=".."><span class="material-symbols-outlined">arrow_back</span></button>
+  <button class="approve" (click)="approve(event)">Approve</button>
+  <button class="decline" (click)="decline(event)">Decline</button>
+  <div class="details">
+    <div *ngIf="event.id">
+      <div class="photo">
+        <label>Photo</label>
+        <p>{{event.image}}</p>
+      </div>
+      <div class="name">
+        <label>Name</label>
+        <p>{{event.name}}</p>
+      </div>
+      <div class="creator">
+        <label>Creator (ID)</label>
+        <p>{{event.creator.name}} {{event.creator.id}}</p>
+      </div>
+      <div class="address">
+        <label>Address</label>
+        <p>{{event.address}}</p>
+      </div>
+      <div class="start">
+        <label>Start</label>
+        <p>{{eventService.parseDate(event.startDate)}}</p>
+      </div>
+      <div class="end">
+        <label>End</label>
+        <p>{{eventService.parseDate(event.endDate)}}</p>
+      </div>
+      <div class="inform">
+        <label>Description</label>
+        <p>{{event.description}}</p>
+      </div>
+      <div class="price">
+        <label>Price</label>
+        <p>{{event.price}}</p>
+      </div>
     </div>
-    <div class="name">
-      <label>Name</label>
-      <p>{{event.name}}</p>
-    </div>
-    <div class="creator">
-      <label>Creator (ID)</label>
-      <p>{{event.creator.name}} {{event.creator.id}}</p>
-    </div>
-    <div class="address">
-      <label>Address</label>
-      <p>{{event.address}}</p>
-    </div>
-    <div class="start">
-      <label>Start</label>
-      <p>{{eventService.parseDate(event.startDate)}}</p>
-    </div>
-    <div class="end">
-      <label>End</label>
-      <p>{{eventService.parseDate(event.endDate)}}</p>
-    </div>
-    <div class="inform">
-      <label>Description</label>
-      <p>{{event.description}}</p>
-    </div>
-    <div class="price">
-      <label>Price</label>
-      <p>{{event.price}}</p>
+    <div class="comment">
+      <label>Comment</label>
+      <input type="text"/>
     </div>
   </div>
-  <div class="comment">
-    <label>Comment</label>
-    <input type="text"/>
-  </div>
-</div>
 </div>
 <router-outlet></router-outlet>

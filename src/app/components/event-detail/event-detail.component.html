@@ -2,6 +2,7 @@
 <button class="delete" (click)="deleteEvent(event)">Delete event</button>
 <button class="info" (click)="showUserDetails(event.creator)">Creator information</button>
 <div class="eventDetail">
+  <button routerLink=".."><span class="material-symbols-outlined">arrow_back</span></button>
   <div class="eventInfo" *ngIf="event.creator">
     <h2>Event №{{event.id}}</h2>
     <div class="creator">

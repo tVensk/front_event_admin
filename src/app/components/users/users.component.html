@@ -28,9 +28,9 @@
       <hr>
       <ul>
         <li *ngFor="let p of pages; let i=index">
-          <a (click)="setPage(i-1,$event)"><</a>
+          <a (click)="setPage(i-1,$event)"><span class="material-symbols-outlined">arrow_back</span></a>
           <a class="now" (click)="setPage(i,$event)">{{i + 1}}</a>
-          <a (click)="setPage(i+1,$event)">></a>
+          <a (click)="setPage(i+1,$event)"><span class="material-symbols-outlined">arrow_forward</span></a>
         </li>
       </ul>
     </div>
