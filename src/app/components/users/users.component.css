@@ -84,7 +84,7 @@ ul li {
   outline: 1px solid #C7CFD6;
   }
  ul li a{
-    color: black;
+    color: #475F7B;
         float: left;
         padding: 8px 16px;
         text-decoration: none;
@@ -100,4 +100,8 @@ ul li {
  ul li a.now{
    background-color: #5A8DEE;
    color: #fff;
+ }
+ ul li a span.material-symbols-outlined{
+ font-size: 15px;
+ vertical-align: middle;
  }

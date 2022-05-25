@@ -145,12 +145,11 @@ right: 0%;
 top: 31.37%;
 bottom: 1.96%;
 
-background: url(../../../assets/img/email.png) no-repeat;
-padding-left: 40px;
+
+padding-left: 45px;
 
 
 background: #FFFFFF;
-/* Neutral / Grey 200 */
 
 border: 1px solid #CBD2D9;
 box-sizing: border-box;
@@ -160,16 +159,9 @@ font-style: normal;
 font-weight: 600;
 font-size: 21px;
 line-height: 150%;
-
-
 text-decoration-line: underline;
 
-/* Neutral / Grey 200 */
-
 color: #000000;
-
-
-/* Inside auto layout */
 
 flex: none;
 order: 1;
@@ -197,12 +189,9 @@ font-style: normal;
 font-weight: 800;
 font-size: 17px;
 line-height: 100%;
-/* identical to box height, or 17px */
 
 letter-spacing: 1.5px;
 text-transform: uppercase;
-
-/* Neutral / Grey 800 */
 
 color: #323F4B;
 
@@ -222,12 +211,10 @@ right: 0%;
 top: 31.37%;
 bottom: 1.96%;
 
-/* Neutral / White */
 
-padding-left: 40px;
+padding-left: 45px;
 
 background: #FFFFFF;
-/* Neutral / Grey 200 */
 
 border: 1px solid #CBD2D9;
 box-sizing: border-box;
@@ -243,10 +230,6 @@ line-height: 150%;
 /* Neutral / Grey 200 */
 
 color: #000000;
-
-
-/* Inside auto layout */
-
 flex: none;
 order: 1;
 flex-grow: 0;
@@ -259,9 +242,7 @@ margin: 0px 12px;
     left: 552px;
     top: 649px;
     border: #2F80ED;
-    /* Primary / Primary 500 */
-
-    background: #2F80ED;
+      background: #2F80ED;
     border-radius: 5px;
 
     color:#ffffff;
@@ -276,4 +257,26 @@ margin: 0px 12px;
 .login:active {
   background: #2F80ED;
   box-shadow: 0 3px  #2F80ED inset;
+}
+
+div.log {
+
+}
+.em span{
+ position: absolute;
+ z-index:2;
+ font-size: 28px;
+ vertical-align: middle;
+ color: #CBD2D9;
+ margin-left: 23px;
+ padding-top: 42px;
+}
+.pass span{
+ position: absolute;
+ z-index:2;
+ font-size: 28px;
+ vertical-align: middle;
+ color: #CBD2D9;
+ margin-left: 23px;
+ padding-top: 42px;
 }

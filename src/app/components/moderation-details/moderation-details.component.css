@@ -127,6 +127,31 @@ line-height: 21px;
 color: #596778;
 }
 
+button.back{
+ width: 35px;
+ height: 20px;
+ margin: 10px;
+ border-radius: 5px;
+  border: #F2F4F4;
+  background-color: #F2F4F4;
+ }
+
+ button span.material-symbols-outlined{
+  border-radius: 5px;
+  border: #F2F4F4;
+  background-color: #F2F4F4;
+  width: 35px;
+  height: 20px;
+ font-size: 15px;
+ vertical-align: middle;
+ color: #475F7B;
+ padding-top:5px;
+ }
+ button span.material-symbols-outlined:hover {
+ filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.12));
+ background-color: #F2F4F4;
+ outline: 1px solid #C7CFD6;
+ }
 
 
 
