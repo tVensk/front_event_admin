@@ -2,8 +2,7 @@ img.background {
   position: relative;
   width: 1440px;
   height: 950px;
-  left: -6px;
-  padding-top:4px;
+  padding-top:12px;
   background-attachment: scroll;
 }
 
@@ -260,7 +259,7 @@ margin: 0px 12px;
 }
 
 div.log {
-
+  display: flex;
 }
 .em span{
  position: absolute;
@@ -279,4 +278,9 @@ div.log {
  color: #CBD2D9;
  margin-left: 23px;
  padding-top: 42px;
+}
+
+.log-container{
+  margin: auto;
+  position: relative;
 }
