@@ -1,8 +1,8 @@
 <app-app-menu></app-app-menu>
 <div class="modDet">
   <button class="back" routerLink=".."><span class="material-symbols-outlined">arrow_back</span></button>
-  <button class="approve" (click)="approve(event)">Approve</button>
-  <button class="decline" (click)="decline(event)">Decline</button>
+  <button *ngIf="event.status=='NEW'" class="approve" (click)="approve(event)">Approve</button>
+  <button *ngIf="event.status=='NEW'" class="decline" (click)="decline(event)">Decline</button>
   <div class="details">
     <div *ngIf="event.id">
       <div class="photo">
