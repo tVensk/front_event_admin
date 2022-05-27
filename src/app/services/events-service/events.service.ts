@@ -67,7 +67,10 @@ export class EventsService {
   }
 
   deleteEvent(event: Event) {
-    //TODO:delete implementation
+    return this.http.delete("http://172.20.13.76:8080/api/event", {
+      headers: {"Authorization": SessionToken.sessionToken},
+      body: {"id": event.id}
+    });
   }
 
   parseDate(dateString: Date) {

@@ -42,7 +42,7 @@ export class UserDetailComponent implements OnInit {
 
   deleteUser(user: User) {
     if (confirm("Are you sure to delete " + user.name)) {
-      this.userService.deleteUser(user);
+      this.userService.deleteUser(user).subscribe(() => this.router.navigate(['users']).then(() => console.log("Navigated to users")));
     }
   }
 

@@ -14,7 +14,7 @@ export class UsersService {
   constructor(private http: HttpClient) {
   }
 
-  getUsers(page:number) {
+  getUsers(page: number) {
     return this.http.get(BASE_URL + "admin/users?page=" + page, {headers: {"Authorization": SessionToken.sessionToken}});
   }
 
@@ -23,6 +23,9 @@ export class UsersService {
   }
 
   deleteUser(user: User) {
-    //TODO: delete user
+    return this.http.delete(BASE_URL + "admin/user", {
+      headers: {"Authorization": SessionToken.sessionToken},
+      body: {"id": user.id}
+    });
   }
 }

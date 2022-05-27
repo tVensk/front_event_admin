@@ -41,7 +41,7 @@ export class EventDetailComponent implements OnInit {
 
   deleteEvent(event: Event) {
     if (confirm("Are you sure to delete " + event.name)) {
-      this.eventService.deleteEvent(event);
+      this.eventService.deleteEvent(event).subscribe(() => this.router.navigate(['events']).then(() => console.log("Navigated to events")));
     }
   }
 
