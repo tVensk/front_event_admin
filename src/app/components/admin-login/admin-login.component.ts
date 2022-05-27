@@ -10,11 +10,10 @@ import {Router} from "@angular/router";
 export class AdminLoginComponent implements OnInit {
   email: string = "";
   password: string = "";
-  isAuthenticated: boolean = false;
   authenticationError: boolean = false;
 
   constructor(public loginService: LoginService,
-              public router:Router) {
+              public router: Router) {
   }
 
   ngOnInit(): void {
@@ -22,11 +21,7 @@ export class AdminLoginComponent implements OnInit {
 
   login() {
     this.loginService.login(this.email, this.password).catch(() => {
-      this.authenticationError = true;
-      setTimeout(() => {
-        this.authenticationError = false;
-        this.isAuthenticated = false;
-      }, 1500)
+      alert("Failed to sign in! Please check your credentials and try again.");
     }).finally(() => {
       if (this.loginService.isLoggedIn) {
         const redirectUrl = this.loginService.redirectUrl;
